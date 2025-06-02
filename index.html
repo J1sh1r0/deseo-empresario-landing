@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>El Deseo del Empresario</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="hero">
-    <h1>El Deseo del Empresario</h1>
-    <p>Transformando negocios con soluciones tecnológicas</p>
-    <a href="#servicios" class="btn">Conócenos</a>
+    <div class="hero-content">
+      <h1>El Deseo del Empresario</h1>
+      <p>Impulsamos tu rentabilidad digitalizando tu negocio</p>
+      <a href="#servicios" class="btn">Descubre nuestros servicios</a>
+    </div>
   </header>
 
   <section class="nosotros">
-    <h2>Quiénes somos</h2>
-    <p><strong>Misión:</strong> Solución de problemas impulsando la rentabilidad y crecimiento económico mediante la digitalización.</p>
-    <p><strong>Visión:</strong> Impulsar las economías a través de gestión comercial digital con tecnologías.</p>
+    <h2>¿Quiénes Somos?</h2>
+    <p><strong>Misión:</strong> Solucionamos problemas impulsando la rentabilidad y crecimiento económico mediante la digitalización.</p>
+    <p><strong>Visión:</strong> Impulsar las economías mediante la gestión comercial digital con tecnologías.</p>
   </section>
 
-  <section id="servicios">
+  <section class="beneficios">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="beneficios-grid">
+      <div class="beneficio">🚀 Soluciones rápidas y efectivas</div>
+      <div class="beneficio">💼 Atención personalizada para empresas</div>
+      <div class="beneficio">📊 Experiencia en crecimiento digital</div>
+      <div class="beneficio">🔧 Soporte técnico garantizado</div>
+    </div>
+  </section>
+
+  <section id="servicios" class="servicios">
     <h2>Servicios</h2>
-    <ul>
-      <li>🌐 Creación de Páginas Web</li>
-      <li>📱 Aplicaciones Móviles</li>
-      <li>📈 Marketing y Gestión</li>
-      <li>❄️ Mantenimiento de Minisplit</li>
-      <li>🛒 Venta de Minisplit Aufit</li>
-    </ul>
+    <div class="servicios-grid">
+      <div class="servicio">🌐 Creación de Páginas Web</div>
+      <div class="servicio">📱 Aplicaciones Móviles</div>
+      <div class="servicio">📈 Marketing y Gestión</div>
+      <div class="servicio">❄️ Mantenimiento de Minisplits</div>
+      <div class="servicio">🛒 Venta de Minisplit Aufit</div>
+    </div>
   </section>
 
-  <section class="contacto">
-    <h2>Agenda tu visita</h2>
+  <section class="testimonios">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <p>"Una empresa confiable y profesional. Nos ayudaron a crecer digitalmente en semanas."</p>
+    <p>"Su equipo entendió nuestras necesidades desde el primer contacto."</p>
+  </section>
+
+  <section class="cta">
+    <h2>¿Listo para transformar tu negocio?</h2>
+    <a href="#contacto" class="btn">Agendar visita ahora</a>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>Agenda tu Visita</h2>
     <form action="contacto.php" method="POST">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="correo" placeholder="Correo electrónico" required>
-      <input type="text" name="empresa" placeholder="Nombre del hotel/empresa" required>
-      <input type="date" name="fecha" required>
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="correo" placeholder="Correo electrónico" required />
+      <input type="text" name="empresa" placeholder="Hotel o empresa" required />
+      <input type="date" name="fecha" required />
       <textarea name="mensaje" placeholder="Mensaje adicional"></textarea>
-      <button type="submit">Agendar visita</button>
+      <button type="submit">Agendar Visita</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 El Deseo del Empresario S.A.P.I. de C.V.</p>
+    <p>&copy; 2025 El Deseo del Empresario S.A.P.I. de C.V. — Todos los derechos reservados.</p>
   </footer>
 
   <script src="assets/js/main.js"></script>
