@@ -23,10 +23,59 @@ ul {
   padding: 0;
 }
 
+/* === Navbar === */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #38bdf8;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  background-color: rgba(56, 189, 248, 0.15);
+}
+
+.navbar.scrolled {
+  background-color: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
 /* === Hero === */
 .hero {
   background: radial-gradient(circle at top left, #1e293b, #0f172a);
-  padding: 120px 20px;
+  padding: 160px 20px 120px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -272,4 +321,44 @@ footer {
   to {
     transform: translate(-50%, -50%);
   }
+}
+
+/* === Tarjetas Tecnológicas: Servicios y Beneficios === */
+.servicio, .beneficio {
+  position: relative;
+  background: rgba(30, 41, 59, 0.7);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  color: #f1f5f9;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.1);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.servicio::before,
+.beneficio::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 180deg at 50% 50%, #38bdf8, transparent, #0ea5e9, transparent);
+  animation: rotateGlow 6s linear infinite;
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.servicio:hover, .beneficio:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
